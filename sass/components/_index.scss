@@ -1,59 +1,121 @@
-/******************************************************************/
-/*                Index - Main section styles                     */
-/******************************************************************/
+// /******************************************************************/
+// /*                Index - Main section styles                     */
+// /******************************************************************/
 
-/* #region Hero styles */
+// #region Hero styles
 
-.section-hero {
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.hero__background {
   display: block;
-  max-width: 1600px;
-  padding: 200px 0;
-  margin: 0px auto;
+  // position: relative;
+  margin: 0 auto;
+  // padding: 15px 15px;
+  text-align: center;
+  width: 480px;
+  height: 400px;
+
   background-color: $header-overlay;
   background-image:
     linear-gradient(to right, $header-overlay, $header-overlay),
-    url('../images/headerbg.jpg');
+    url('../images/headerbg-480.jpg');
   background-repeat: no-repeat;
   background-position: 50% top;
   background-size: cover;
-  text-align: center;
+  background-color: transparent;
+
+  @media (min-width: 768px) {
+    width: 768px;
+    background-image:
+      linear-gradient(to right, $header-overlay, $header-overlay),
+      url('../images/headerbg-768.jpg');
+  }
+
+  @media (min-width: 1200px) {
+    width: 1600px;
+    height: 600px;
+    background-image:
+      linear-gradient(to right, $header-overlay, $header-overlay),
+      url('../images/headerbg-1600.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% top;
+    background-size: cover;
+  }
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .hero__title {
+  display: block;
   padding: 0;
-  margin: 0;
-  margin-bottom: 30px;
-  color: $contrast-text;
+  margin: 0 0 30px;
+  
+  max-width: 360px;
 
+  color: $contrast-text;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
 
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: 1200) {
+    max-width: 696px;
+
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
-/* #endregion */
-/* #region Our advantages styles */
+// #endregion
 
-.section--advantages {
-  padding-bottom: 0;
+// #region Our advantages styles
+
+.advantage__list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  margin: -15px;
 }
 
 .advantage {
-  width: 270px;
-  margin-right: 15px;
-  margin-left: 15px;
+  display: block;
+  --itemmargin: 15px;
+  --itemcount: 1;
 
-  text-align: left;
+  margin: var(--itemmargin);
+
+  @media (min-width: 768px) {
+    --itemcount: 2;
+  }
+    
+  @media (min-width: 1200px) {
+    --itemcount: 4;
+  }
+
+  width: calc( 100% / var(--itemcount) - 2 * var(--itemmargin) );
 }
 
 .advantage__icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
+  width: 270;
   height: 120px;
   margin-bottom: 30px;
   padding: 0;
@@ -71,6 +133,7 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .advantages__text {
@@ -80,12 +143,24 @@
   line-height: 1.71;
 }
 
-/* #endregion */
-/* #region What we do section styles */
+// #endregion
+
+// #region What we do section styles
+
+.what-we-do {
+  padding-top: 0;
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+
+.specialization__list {
+  margin: -15px;
+}
 
 .specialization {
   position: relative;
-  margin: 0 15px;
+  margin: 15px;
 }
 
 .specialization__title {
@@ -113,14 +188,27 @@
   }
 }
 
-/* #endregion */
-/* #region Our team section styles */
+// #endregion
+
+// #region Our team section styles
+
+.team-member__list {
+  margin: -15px;
+}
 
 .team-member {
-  margin-left: 15px;
-  margin-right: 15px;
+  --itemmargin: 15px;
+  --itemcount: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: var(--itemmargin);
   padding-bottom: 30px;
-  width: 270px;
+
+  @media (min-width: 768px) {--itemcount: 2;}    
+  @media (min-width: 1200px) {--itemcount: 4;}
+  width: calc(100% / var(--itemcount) - 2 * var(--itemmargin));
 
   background-color: $contrast-text;
 
@@ -150,19 +238,39 @@
   text-align: center;
 }
 
-/* #endregion */
-/* #region Our clients section styles */
+// #endregion
+
+// #region Our clients section styles
+
+.our-client__list {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: -15px;
+}
 
 .our-client {
-  display: inline-block;
-  width: 170px;
-  height: 92px;
-  margin-left: 15px;
-  margin-right: 15px;
-  padding: 16px 32px;
+  --itemmargin: 15px;
+  --itemcount: 2;
+  @media (min-width: 768px) {--itemcount: 3;}    
+  @media (min-width: 1200px) {--itemcount: 6;}
 
-  font-size: 0;
-  text-align: center;
+  display: inline-block;
+  width: calc(100% / var(--itemcount) - 2 * var(--itemmargin));
+  margin: var(--itemmargin);
+}
+
+.our-client__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 92px;
+  // margin: 0;
+  // padding: 16px 32px;
+
+  // font-size: 0;
   text-decoration: none;
 
   color: $icon-color;
@@ -179,8 +287,9 @@
   }
 }
 
-/* #endregion */
-/* #region Modal window styles */
+// #endregion
+
+// #region Modal window styles
 
 .backdrop {
   position: fixed;
@@ -192,13 +301,14 @@
   background-color: $what-we-do-overlay;
 
   transition: opacity 250ms $animation-time-function;
+  z-index: 3;
 }
 
 .modal-window {
   display: block;
   position: absolute;
-  height: 581px;
-  width: 528px;
+  width: 450px;
+  @media (min-width: 1200px) { width: 528px; }
   top: 50%;
   left: 50%;
   margin: 0;
@@ -223,8 +333,10 @@
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
+  @media (min-width: 1200px) { line-height: 1.15; }
   letter-spacing: 0.03em;
+  text-align: center;
 
   color: $dark-grey-text;
 }
@@ -255,8 +367,9 @@
   }
 }
 
-/* #endregion */
-/* #region Feedback form styles */
+// #endregion
+
+// #region Feedback form styles
 
 .form,
 .input-field {
@@ -280,7 +393,7 @@
 
 .input-field__input {
   height: 40px;
-  width: 448px;
+  width: 100%;
   padding: 12px 16px 12px 42px;
   margin: 0px;
 
@@ -323,15 +436,15 @@
   resize: none;
 }
 
-/* #endregion */
-/* #region Agreement checkbox styles */
+// #endregion
+
+// #region Agreement checkbox styles
 
 .agreement {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: 13px;
+  justify-content: center;
   margin-bottom: 30px;
 }
 
@@ -374,8 +487,13 @@
   margin-left: 7px;
   margin-bottom: 0;
 
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
+
+  @media (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
   letter-spacing: 0.03em;
   color: $light-grey-text;
 }
@@ -385,4 +503,4 @@
   color: $active-link-color;
 }
 
-/* #endregion */
+// #endregion

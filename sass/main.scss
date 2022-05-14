@@ -1,3 +1,30 @@
+//////////////////////////////////////////////////////
+// VIEWPORT BREAKPOINTS: <-- 480 -- 768 -- 1200 --> //
+//////////////////////////////////////////////////////
+//
+//  setting for tablet size
+// @media (min-width: 768px) and (max-width:1199px) {}
+
+//  setting for desktop size
+// @media (min-width: 1200px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import './utils/variables';
 @import './utils/common';
 @import './utils/logo';
@@ -8,3 +35,4 @@
 
 @import './components/index';
 @import './components/portfolio';
+
