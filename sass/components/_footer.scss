@@ -1,0 +1,135 @@
+/* #region Footer section styles */
+
+.footer {
+  /* min-height: 252px; */
+  padding: 60px 0;
+  background-color: $dark-grey-background;
+}
+
+.footer-address,
+.footer-joinus,
+.footer-signup {
+  display: flex;
+  flex-flow: column;
+}
+
+.footer-joinus__title,
+.footer-signup__title {
+  margin: 0;
+  margin-bottom: 20px;
+
+  color: $contrast-text;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.footer-address__logo {
+  color: $contrast-text;
+}
+
+/* #endregion */
+/* #region Footer Address section styles */
+
+.footer-address {
+  margin-right: 70px;
+}
+
+.footer-address__text {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  color: $contrast-text;
+  font-style: normal;
+  /* сброс user-agent стилей для тега address */
+  line-height: 1.71;
+}
+
+.footer-address__link {
+  display: inline-block;
+  margin-top: 9px;
+  margin-bottom: 0;
+
+  line-height: 1.71;
+  text-decoration: none;
+
+  color: $footer-text;
+
+  transition: color 250ms $animation-time-function;
+
+  &:hover,
+  &:focus {
+    color: $active-link-color;
+  }
+}
+
+/* #endregion */
+/* #region Footer Join-Us social links styles */
+
+.footer-joinus {
+  margin-right: 93px;
+  padding-top: 12px;
+}
+
+.icon--footer-style {
+  background-color: #444444;
+  color: $contrast-text;
+
+  &:hover,
+  &:focus {
+    background-color: $active-link-color;
+  }
+}
+
+.contact__link--footer-style {
+  background-color: #444444;
+  color: $contrast-text;
+}
+
+/* #endregion */
+/* #region Footer Sign up form styles */
+
+.footer-signup {
+  margin-right: 0;
+  padding-top: 12px;
+}
+
+.form-signup {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-signup__input {
+  height: 50px;
+  width: 358px;
+  padding: 15px 16px;
+  margin-right: 12px;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: $dark-grey-background;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition: border-color 250ms $animation-time-function;
+
+  // &:hover,
+  &:focus {
+    outline: none;
+    border-color: $active-link-color;
+  }
+}
+
+.form-signup__icon {
+  display: block;
+  height: 24px;
+  width: 24px;
+  margin-left: 10px;
+  color: $contrast-text;
+}
+
+/* #endregion */

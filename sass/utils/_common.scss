@@ -1,0 +1,107 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body {
+  color: $default-text;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.icon {
+  fill: currentColor;
+}
+
+.section {
+  margin: 0;
+  padding: 94px 0;
+
+  text-align: center;
+}
+
+.section__header {
+  margin: 0 0 50px;
+
+  color: $dark-grey-text;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+
+  text-align: center;
+}
+
+.section--bgc-lightgrey {
+  background-color: $light-grey-background;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+
+  &--flex {
+    display: flex;
+  }
+
+  &--center {
+    align-items: center;
+  }
+}
+
+.card-list {
+  display: flex;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  text-align: center;
+  background-color: $active-link-color;
+  color: $contrast-text;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-width: 0;
+  border-radius: 4px;
+  cursor: pointer;
+
+  transition: box-shadow 250ms $animation-time-function 100ms;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+      0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    outline: none;
+  }
+}

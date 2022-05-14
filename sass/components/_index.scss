@@ -1,0 +1,388 @@
+/******************************************************************/
+/*                Index - Main section styles                     */
+/******************************************************************/
+
+/* #region Hero styles */
+
+.section-hero {
+  display: block;
+  max-width: 1600px;
+  padding: 200px 0;
+  margin: 0px auto;
+  background-color: $header-overlay;
+  background-image:
+    linear-gradient(to right, $header-overlay, $header-overlay),
+    url('../images/headerbg.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% top;
+  background-size: cover;
+  text-align: center;
+}
+
+.hero__title {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  color: $contrast-text;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* #endregion */
+/* #region Our advantages styles */
+
+.section--advantages {
+  padding-bottom: 0;
+}
+
+.advantage {
+  width: 270px;
+  margin-right: 15px;
+  margin-left: 15px;
+
+  text-align: left;
+}
+
+.advantage__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  padding: 0;
+
+  background-color: $light-grey-background;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.advantages__header {
+  margin: 0;
+
+  color: $dark-grey-text;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.advantages__text {
+  margin: 10px 0 0 0;
+
+  color: $light-grey-text;
+  line-height: 1.71;
+}
+
+/* #endregion */
+/* #region What we do section styles */
+
+.specialization {
+  position: relative;
+  margin: 0 15px;
+}
+
+.specialization__title {
+  display: block;
+  position: absolute;
+  height: 70px;
+  width: 100%;
+  bottom: 0;
+  padding: 27px 0;
+
+  background-color: $what-we-do-overlay;
+  transition: background-color 1000ms ease-in-out;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $contrast-text;
+
+  .specialization:hover &,
+  .specialization:focus & {
+    background-color: $what-we-do-overlay-dark;
+  }
+}
+
+/* #endregion */
+/* #region Our team section styles */
+
+.team-member {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding-bottom: 30px;
+  width: 270px;
+
+  background-color: $contrast-text;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-member__name {
+  margin: 30px 0 10px;
+
+  color: $dark-grey-text;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  text-align: center;
+}
+
+.team-member__position {
+  margin: 0 0 16px;
+  color: $light-grey-text;
+  font-size: 16px;
+  line-height: 1.19;
+
+  text-align: center;
+}
+
+/* #endregion */
+/* #region Our clients section styles */
+
+.our-client {
+  display: inline-block;
+  width: 170px;
+  height: 92px;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 16px 32px;
+
+  font-size: 0;
+  text-align: center;
+  text-decoration: none;
+
+  color: $icon-color;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+
+  transition: color 250ms $animation-time-function,
+  border-color 250ms $animation-time-function;
+
+  &:hover,
+  &:focus {
+    color: $active-link-color;
+    border-color: $active-link-color;
+  }
+}
+
+/* #endregion */
+/* #region Modal window styles */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: $what-we-do-overlay;
+
+  transition: opacity 250ms $animation-time-function;
+}
+
+.modal-window {
+  display: block;
+  position: absolute;
+  height: 581px;
+  width: 528px;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 40px;
+  transform: scale(1) translate(-50%, -50%);
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  background-color: white;
+  transition: transform 250ms $animation-time-function;
+  
+  .backdrop.is-hidden > & {
+    transform: scale(1.1) translate(-45%, -45%);
+  }
+}
+
+.modal-window__title {
+  margin: 0 0 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  color: $dark-grey-text;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+
+  border-radius: 50%;
+  background-color: $contrast-text;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: $default-text;
+  cursor: pointer;
+
+  transition: color 250ms $animation-time-function;
+
+  &:hover,
+  &:focus {
+    color: $active-link-color;
+    outline: none;
+  }
+}
+
+/* #endregion */
+/* #region Feedback form styles */
+
+.form,
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.input-field:not(:last-of-type) {
+  margin: 0 0 10px;
+}
+
+.input-field__label {
+  margin: 0 0 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $light-grey-text;
+}
+
+.input-field__input {
+  height: 40px;
+  width: 448px;
+  padding: 12px 16px 12px 42px;
+  margin: 0px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color 250ms $animation-time-function;
+
+  &:focus {
+    outline: none;
+    border-color: $active-link-color;
+  }
+}
+
+.input-field__icon {
+  color: $dark-grey-text;
+  transition: color 250ms $animation-time-function;
+
+.input-field__input:focus + & {
+  color: $active-link-color;
+}
+}
+
+.input-field__wrapper {
+  position: relative;
+}
+
+.input-field__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+}
+
+.input-field__comment {
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+}
+
+/* #endregion */
+/* #region Agreement checkbox styles */
+
+.agreement {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 13px;
+  margin-bottom: 30px;
+}
+
+.agreement__input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.agreement__checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px #000000;
+  background-color: #ffffff;
+  color: #ffffff;
+
+  transition: background-color 250ms $animation-time-function,
+    color 250ms $animation-time-function,
+    box-shadow 250ms $animation-time-function;
+
+  .agreement__input:checked + & {
+    background-color: $active-link-color;
+    box-shadow: 0 0 0 2px $active-link-color;
+    color: #ffffff;
+  }
+
+  .agreement__input:focus-within + & {
+    box-shadow: 0 0 0 2px $active-link-color;
+  }
+}
+
+.agreement__label {
+  margin-left: 7px;
+  margin-bottom: 0;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $light-grey-text;
+}
+
+.agreement__link {
+  text-decoration: underline;
+  color: $active-link-color;
+}
+
+/* #endregion */
