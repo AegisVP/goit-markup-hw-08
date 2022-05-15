@@ -220,9 +220,15 @@
 
 .team-member__photo {
   width: 450px;
-  height: 294px;
-  @media (min-width: 768px) { width: 354px; }
-  @media (min-width: 1200px) { width: 270px; }
+  height: 460px;
+  @media (min-width: 768px) {
+    width: 354px;
+    height: 374px;
+  }
+  @media (min-width: 1200px) {
+    width: 270px;
+    height: 260px;
+  }
 }
 
 .team-member__name {

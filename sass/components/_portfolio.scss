@@ -132,6 +132,10 @@
   @media (min-width: 1200px) { width: 370px; }
 }
 
+.portfolio__text-container {
+  position: relative;
+}
+
 .portfolio__text {
   display: block;
   position: absolute;

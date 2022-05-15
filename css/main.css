@@ -966,6 +966,25 @@ ul {
   }
 }
 
+.team-member__photo {
+  width: 450px;
+  height: 460px;
+}
+
+@media (min-width: 768px) {
+  .team-member__photo {
+    width: 354px;
+    height: 374px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .team-member__photo {
+    width: 270px;
+    height: 260px;
+  }
+}
+
 .team-member__name {
   margin: 30px 0 10px;
   color: #212121;
@@ -1426,9 +1445,6 @@ ul {
 }
 
 .portfolio__image {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   width: 450px;
   height: 294px;
 }
@@ -1443,6 +1459,10 @@ ul {
   .portfolio__image {
     width: 370px;
   }
+}
+
+.portfolio__text-container {
+  position: relative;
 }
 
 .portfolio__text {
