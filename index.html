@@ -43,7 +43,7 @@
 						<li class="header-social__item"><a class="header-social__link" href="">LinkedIn</a></li>
 					</ul>
 				</div>
-				<button class="header-button" type="button" data-menu-button>
+				<button class="header-button" type="button" data-menu-button aria-label="Мобильное меню">
 					<svg class="icon" width="40" height="40">
 						<use class="header-button__open" href="./images/sprite.svg#menu"></use>
 						<use class="header-button__close" href="./images/sprite.svg#close40"></use>
@@ -59,7 +59,7 @@
 				<div class="hero__background">
 					<div class="container hero__container">
 						<h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-						<button class="button" type="button" data-modal-open>Заказать услугу</button>
+						<button class="button" type="button" data-modal-open aria-label="Заказать">Заказать услугу</button>
 					</div>
 				</div>
 			</section>
@@ -67,6 +67,7 @@
 			<!-- Horisontal list of company advantages -->
 			<section class="section">
 				<div class="container">
+					<h2 style="visibility: hidden; position: absolute;">Наши преимущества</h2>
 					<ul class="advantage__list">
 						<li class="advantage">
 							<div class="advantage__icon">
@@ -117,15 +118,54 @@
 					<h2 class="section__header">Чем мы занимаемся</h2>
 					<ul class="card-list specialization__list">
 						<li class="specialization">
-							<img class="specialization__icon" src="images/whatwedo/whatwedo1.jpg" alt="Example 1" width="370" height="294" />
+							<!-- <img class="specialization__icon" src="images/whatwedo/whatwedo1.jpg" alt="Example 1" width="370" height="294" /> -->
+							<img
+								srcset="
+									./images/whatwedo/whatwedo1/img.jpg   370w,
+									./images/whatwedo/whatwedo1/img@1,5x.jpg 556w,
+									./images/whatwedo/whatwedo1/img@2x.jpg  740w,
+									./images/whatwedo/whatwedo1/img@3x.jpg  1110w"
+								sizes="370px"
+								src="./images/whatwedo/whatwedo1/img.jpg" 
+								alt="What we do 1"
+								width="370"
+								height="294"
+								loading="lazy"
+							/>
 							<div class="specialization__title">Десктопные приложения</div>
 						</li>
 						<li class="specialization">
-							<img class="specialization__icon" src="images/whatwedo/whatwedo2.jpg" alt="Example 2" width="370" height="294" />
+							<!-- <img class="specialization__icon" src="images/whatwedo/whatwedo2.jpg" alt="Example 2" width="370" height="294" /> -->
+							<img
+								srcset="
+									./images/whatwedo/whatwedo2/img.jpg   370w,
+									./images/whatwedo/whatwedo2/img@1,5x.jpg 556w,
+									./images/whatwedo/whatwedo2/img@2x.jpg  740w,
+									./images/whatwedo/whatwedo2/img@3x.jpg  1110w"
+								sizes="370px"
+								src="./images/whatwedo/whatwedo2/img.jpg" 
+								alt="What we do 2"
+								width="370"
+								height="294"
+								loading="lazy"
+							/>
 							<div class="specialization__title">Мобильные приложения</div>
 						</li>
 						<li class="specialization">
-							<img class="specialization__icon" src="images/whatwedo/whatwedo3.jpg" alt="Example 3" width="370" height="294" />
+							<!-- <img class="specialization__icon" src="images/whatwedo/whatwedo3.jpg" alt="Example 3" width="370" height="294" /> -->
+							<img
+								srcset="
+									./images/whatwedo/whatwedo3/img.jpg   370w,
+									./images/whatwedo/whatwedo3/img@1,5x.jpg 556w,
+									./images/whatwedo/whatwedo3/img@2x.jpg  740w,
+									./images/whatwedo/whatwedo3/img@3x.jpg  1110w"
+								sizes="370px"
+								src="./images/whatwedo/whatwedo3/img.jpg" 
+								alt="What we do 3"
+								width="370"
+								height="294"
+								loading="lazy"
+							/>
 							<div class="specialization__title">Дизайнерские решения</div>
 						</li>
 					</ul>
@@ -138,12 +178,63 @@
 					<h2 class="section__header">Наша команда</h2>
 					<ul class="card-list team-member__list">
 						<li class="team-member">
-							<picture class="team-member__photo">
-								<source media="(min-width:1200px)" srcset="./images/ourteam/idemyanenko/270.jpg">
-								<source media="(min-width: 768px)" srcset="./images/ourteam/idemyanenko/354.jpg">
-								<img src="./images/ourteam/idemyanenko/450.jpg" alt="Игорь Демьяненко" />
+							<picture>
+								<source 
+									media="(max-width: 767.98px)" 
+									type="image/webp"
+									srcset="
+										./images/ourteam/idemyanenko/450/img.webp,
+										./images/ourteam/idemyanenko/450/img@2x.webp 2x,
+										./images/ourteam/idemyanenko/450/img@3x.webp 3x"
+								/>
+								<source 
+									media="(max-width: 767.98px)" 
+									srcset="
+										./images/ourteam/idemyanenko/450/img.jpg,
+										./images/ourteam/idemyanenko/450/img@2x.jpg 2x,
+										./images/ourteam/idemyanenko/450/img@3x.jpg 3x"
+								/>
+								<source 
+									media="(min-width:1200px)" 
+									type="image/webp"
+									srcset="
+										./images/ourteam/idemyanenko/270/img.webp,
+										./images/ourteam/idemyanenko/270/img@2x.webp 2x,
+										./images/ourteam/idemyanenko/270/img@3x.webp 3x"
+									width="270" />
+								<source 
+									media="(min-width:1200px)" 
+									srcset="
+										./images/ourteam/idemyanenko/270/img.jpg,
+										./images/ourteam/idemyanenko/270/img@2x.jpg 2x,
+										./images/ourteam/idemyanenko/270/img@3x.jpg 3x"
+									width="270"  />
+								<source 
+									media="(min-width: 768px)" 
+									type="image/webp"
+									srcset="
+										./images/ourteam/idemyanenko/354/img.webp,
+										./images/ourteam/idemyanenko/354/img@2x.webp 2x,
+										./images/ourteam/idemyanenko/354/img@3x.webp 3x"
+									width="354" />
+								<source 
+									media="(min-width: 768px)" 
+									srcset="
+										./images/ourteam/idemyanenko/354/img.jpg,
+										./images/ourteam/idemyanenko/354/img@2x.jpg 2x,
+										./images/ourteam/idemyanenko/354/img@3x.jpg 3x"
+									width="354"  />
+								<img
+									class="team-member__photo"
+									sizes="
+										(min-width: 1200px) 270px,
+										(min-width: 768px)  354px,
+										100vw"
+									src="./images/ourteam/idemyanenko/450.jpg" 
+									alt="Игорь Демьяненко"
+									loading="lazy"
+								/>
 							</picture>
-							<!-- <img class="team-member__photo" src="images/ourteam/idemyanenko/270.jpg" alt="Игорь Демьяненко" width="270" height="260" /> -->
 							<h3 class="team-member__name">Игорь Демьяненко</h3>
 							<p class="team-member__position">Product Designer</p>
 							<ul class="contact-list">
@@ -163,10 +254,62 @@
 						</li>
 
 						<li class="team-member">
-							<picture class="team-member__photo">
-								<source media="(min-width:1200px)" srcset="./images//ourteam/orepina/270.jpg">
-								<source media="(min-width: 768px)" srcset="./images/ourteam/orepina/354.jpg">
-								<img src="./images/ourteam/orepina/450.jpg" alt="Ольга Репина" />
+							<picture>
+								<source 
+                  media="(max-width: 767.98px)" 
+                  type="image/webp"
+                  srcset="
+                    ./images/ourteam/orepina/450/img.webp,
+                    ./images/ourteam/orepina/450/img@2x.webp 2x,
+                    ./images/ourteam/orepina/450/img@3x.webp 3x"
+                />
+                <source 
+                  media="(max-width: 767.98px)" 
+                  srcset="
+                    ./images/ourteam/orepina/450/img.jpg,
+                    ./images/ourteam/orepina/450/img@2x.jpg 2x,
+                    ./images/ourteam/orepina/450/img@3x.jpg 3x"
+                />
+                <source 
+                  media="(min-width:1200px)" 
+                  type="image/webp"
+                  srcset="
+                    ./images/ourteam/orepina/270/img.webp,
+                    ./images/ourteam/orepina/270/img@2x.webp 2x,
+                    ./images/ourteam/orepina/270/img@3x.webp 3x"
+                  width="270" />
+                <source 
+                  media="(min-width:1200px)" 
+                  srcset="
+                    ./images/ourteam/orepina/270/img.jpg,
+                    ./images/ourteam/orepina/270/img@2x.jpg 2x,
+                    ./images/ourteam/orepina/270/img@3x.jpg 3x"
+                  width="270"  />
+                <source 
+                  media="(min-width: 768px)" 
+                  type="image/webp"
+                  srcset="
+                    ./images/ourteam/orepina/354/img.webp,
+                    ./images/ourteam/orepina/354/img@2x.webp 2x,
+                    ./images/ourteam/orepina/354/img@3x.webp 3x"
+                  width="354" />
+                <source 
+                  media="(min-width: 768px)" 
+                  srcset="
+                    ./images/ourteam/orepina/354/img.jpg,
+                    ./images/ourteam/orepina/354/img@2x.jpg 2x,
+                    ./images/ourteam/orepina/354/img@3x.jpg 3x"
+                  width="354"  />
+								<img
+									class="team-member__photo"
+									sizes="
+										(min-width: 1200px) 270px,
+										(min-width: 768px)  354px,
+										100vw"
+									src="./images/ourteam/orepina/450.jpg" 
+									alt="Ольга Репина"
+									loading="lazy"
+								/>
 							</picture>
 							<h3 class="team-member__name">Ольга Репина</h3>
 							<p class="team-member__position">Frontend Developer</p>
@@ -187,11 +330,63 @@
 						</li>
 
 						<li class="team-member">
-							<picture class="team-member__photo">
-								<source media="(min-width:1200px)" srcset="./images//ourteam/ntarasov/270.jpg">
-								<source media="(min-width: 768px)" srcset="./images/ourteam/ntarasov/354.jpg">
-								<img src="./images/ourteam/ntarasov/450.jpg" alt="Николай Тарасов" />
-							</picture>
+							<picture>
+								<source 
+                  media="(max-width: 767.98px)" 
+                  type="image/webp"
+                  srcset="
+                    ./images/ourteam/ntarasov/450/img.webp,
+                    ./images/ourteam/ntarasov/450/img@2x.webp 2x,
+                    ./images/ourteam/ntarasov/450/img@3x.webp 3x"
+                />
+                <source 
+                  media="(max-width: 767.98px)" 
+                  srcset="
+                    ./images/ourteam/ntarasov/450/img.jpg,
+                    ./images/ourteam/ntarasov/450/img@2x.jpg 2x,
+                    ./images/ourteam/ntarasov/450/img@3x.jpg 3x"
+                />
+                <source 
+                  media="(min-width:1200px)" 
+                  type="image/webp"
+                  srcset="
+                    ./images/ourteam/ntarasov/270/img.webp,
+                    ./images/ourteam/ntarasov/270/img@2x.webp 2x,
+                    ./images/ourteam/ntarasov/270/img@3x.webp 3x"
+                  width="270" />
+                <source 
+                  media="(min-width:1200px)" 
+                  srcset="
+                    ./images/ourteam/ntarasov/270/img.jpg,
+                    ./images/ourteam/ntarasov/270/img@2x.jpg 2x,
+                    ./images/ourteam/ntarasov/270/img@3x.jpg 3x"
+                  width="270"  />
+                <source 
+                  media="(min-width: 768px)" 
+                  type="image/webp"
+                  srcset="
+                    ./images/ourteam/ntarasov/354/img.webp,
+                    ./images/ourteam/ntarasov/354/img@2x.webp 2x,
+                    ./images/ourteam/ntarasov/354/img@3x.webp 3x"
+                  width="354" />
+                <source 
+                  media="(min-width: 768px)" 
+                  srcset="
+                    ./images/ourteam/ntarasov/354/img.jpg,
+                    ./images/ourteam/ntarasov/354/img@2x.jpg 2x,
+                    ./images/ourteam/ntarasov/354/img@3x.jpg 3x"
+                  width="354"  />
+								<img
+									class="team-member__photo"
+									sizes="
+										(min-width: 1200px) 270px,
+										(min-width: 768px)  354px,
+										100vw"
+									src="./images/ourteam/ntarasov/450.jpg" 
+									alt="Николай Тарасов"
+									loading="lazy"
+								/>
+							</picture>							
 							<h3 class="team-member__name">Николай Тарасов</h3>
 							<p class="team-member__position">Marketing</p>
 							<ul class="contact-list">
@@ -211,10 +406,62 @@
 						</li>
 
 						<li class="team-member">
-							<picture class="team-member__photo">
-								<source media="(min-width:1200px)" srcset="./images//ourteam/mermakov/270.jpg">
-								<source media="(min-width: 768px)" srcset="./images/ourteam/mermakov/354.jpg">
-								<img src="./images/ourteam/mermakov/450.jpg" alt="Михаил Ермаков" />
+             <picture>
+								<source 
+									media="(max-width: 767.98px)" 
+									type="image/webp"
+									srcset="
+										./images/ourteam/mermakov/450/img.webp,
+										./images/ourteam/mermakov/450/img@2x.webp 2x,
+										./images/ourteam/mermakov/450/img@3x.webp 3x"
+								/>
+								<source 
+									media="(max-width: 767.98px)" 
+									srcset="
+										./images/ourteam/mermakov/450/img.jpg,
+										./images/ourteam/mermakov/450/img@2x.jpg 2x,
+										./images/ourteam/mermakov/450/img@3x.jpg 3x"
+								/>
+								<source 
+									media="(min-width:1200px)" 
+									type="image/webp"
+									srcset="
+										./images/ourteam/mermakov/270/img.webp,
+										./images/ourteam/mermakov/270/img@2x.webp 2x,
+										./images/ourteam/mermakov/270/img@3x.webp 3x"
+									width="270" />
+								<source 
+									media="(min-width:1200px)" 
+									srcset="
+										./images/ourteam/mermakov/270/img.jpg,
+										./images/ourteam/mermakov/270/img@2x.jpg 2x,
+										./images/ourteam/mermakov/270/img@3x.jpg 3x"
+									width="270"  />
+								<source 
+									media="(min-width: 768px)" 
+									type="image/webp"
+									srcset="
+										./images/ourteam/mermakov/354/img.webp,
+										./images/ourteam/mermakov/354/img@2x.webp 2x,
+										./images/ourteam/mermakov/354/img@3x.webp 3x"
+									width="354" />
+								<source 
+									media="(min-width: 768px)" 
+									srcset="
+										./images/ourteam/mermakov/354/img.jpg,
+										./images/ourteam/mermakov/354/img@2x.jpg 2x,
+										./images/ourteam/mermakov/354/img@3x.jpg 3x"
+									width="354"  />
+								<img
+									class="team-member__photo"
+									sizes="
+										(min-width: 1200px) 270px,
+										(min-width: 768px)  354px,
+										100vw"
+									src="./images/ourteam/mermakov/450.jpg" 
+									alt="Михаил Ермаков"
+									loading="lazy"
+								/>
 							</picture>
 							<h3 class="team-member__name">Михаил Ермаков</h3>
 							<p class="team-member__position">UI Designer</p>
@@ -301,7 +548,7 @@
 					<h3 class="footer-signup__title">Подпишитесь на рассылку</h3>
 					<form class="form-signup">
 						<input class="form-signup__input" type="email" placeholder="Email" />
-						<button class="button" type="submit">Подписаться<svg class="icon form-signup__icon" width="24" height="24">
+						<button class="button button--inline" type="submit" aria-label="Подписаться">Подписаться<svg class="icon form-signup__icon" width="24" height="24">
 								<use href="./images/sprite.svg#form-send"></use>
 							</svg></button>
 					</form>
@@ -314,7 +561,7 @@
 			<!-- <div class="backdrop " data-modal> -->
 			<div class="modal-window">
 				<h3 class="modal-window__title">Оставьте свои данные, мы вам перезвоним</h3>
-				<button class="icon-container" data-modal-close><svg class="icon" width="11" height="11" data-modal-close>
+				<button class="icon-container" data-modal-close><svg class="icon" width="11" height="11" aria-label="Закрыть форму" data-modal-close>
 						<use href="./images/sprite.svg#close"></use>
 					</svg></button>
 

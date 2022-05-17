@@ -7,6 +7,7 @@
   closeModalBtn.addEventListener("click", toggleModal);
 
   function toggleModal() {
+    document.body.classList.toggle("modal-open");
     modal.classList.toggle("is-hidden");
   }
 })();

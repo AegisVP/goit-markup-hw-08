@@ -12,7 +12,7 @@
   padding-bottom: 0;
 }
 
-.hero__background {
+.hero__background {  
   display: block;
   // position: relative;
   margin: 0 auto;
@@ -21,32 +21,75 @@
   width: 480px;
   height: 400px;
 
-  background-color: $header-overlay;
-  background-image:
-    linear-gradient(to right, $header-overlay, $header-overlay),
-    url('../images/headerbg-480.jpg');
   background-repeat: no-repeat;
   background-position: 50% top;
   background-size: cover;
   background-color: transparent;
 
-  @media (min-width: 768px) {
-    width: 768px;
-    background-image:
-      linear-gradient(to right, $header-overlay, $header-overlay),
-      url('../images/headerbg-768.jpg');
+  --bg-url: url("../images/headerbg/480/img.jpg");
+  @media screen and (min-device-pixel-ratio: 1.5),
+         screen and (min-resolution: 144px),
+         screen and (min-resolution: 1.5dppx) {
+    --bg-url: url("../images/headerbg/480/img@15x.jpg");
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+         screen and (min-resolution: 192),
+         screen and (min-resolution: 2dppx) {
+    --bg-url: url("../images/headerbg/480/img@2x.jpg");
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+         screen and (min-resolution: 288px),
+         screen and (min-resolution: 3dppx) {
+    --bg-url: url("../images/headerbg/480/img@3x.jpg");
   }
 
-  @media (min-width: 1200px) {
-    width: 1600px;
-    height: 600px;
-    background-image:
-      linear-gradient(to right, $header-overlay, $header-overlay),
-      url('../images/headerbg-1600.jpg');
-    background-repeat: no-repeat;
-    background-position: 50% top;
-    background-size: cover;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    --bg-url: url("../images/headerbg/768/img.jpg");
+
+    @media screen and (min-device-pixel-ratio: 1.5),
+           screen and (min-resolution: 144px),
+           screen and (min-resolution: 1.5dppx) {
+      --bg-url: url("../images/headerbg/768/img@15x.jpg");
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+           screen and (min-resolution: 192),
+           screen and (min-resolution: 2dppx) {
+      --bg-url: url("../images/headerbg/768/img@2x.jpg");
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+           screen and (min-resolution: 288px),
+           screen and (min-resolution: 3dppx) {
+      --bg-url: url("../images/headerbg/768/img@3x.jpg");
+    }
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+    max-width: 1600px;
+    height: 600px;
+    --bg-url: url("../images/headerbg/1600/img.jpg");
+
+    @media screen and (min-device-pixel-ratio: 1.5),
+           screen and (min-resolution: 144px),
+           screen and (min-resolution: 1.5dppx) {
+      --bg-url: url("../images/headerbg/1600/img@15x.jpg");
+    }
+    @media screen and (min-device-pixel-ratio: 2),
+           screen and (min-resolution: 192),
+           screen and (min-resolution: 2dppx) {
+      --bg-url: url("../images/headerbg/1600/img@2x.jpg");
+    }
+    @media screen and (min-device-pixel-ratio: 3),
+           screen and (min-resolution: 288px),
+           screen and (min-resolution: 3dppx) {
+      --bg-url: url("../images/headerbg/1600/img@3x.jpg");
+    }
+  }
+
+  background-image:
+    linear-gradient(to right, $header-overlay, $header-overlay),
+    var(--bg-url);
 }
 
 .hero__container {
@@ -74,7 +117,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media (min-width: 1200) {
+  @media screen and (min-width: 1200) {
     max-width: 696px;
 
     font-size: 44px;
@@ -100,11 +143,11 @@
 
   margin: var(--itemmargin);
 
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     --itemcount: 2;
   }
     
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     --itemcount: 4;
   }
 
@@ -149,7 +192,7 @@
 
 .what-we-do {
   padding-top: 0;
-  @media (max-width: 1200px) {
+  @media screen and (max-width: 1199.98px) {
     display: none;
   }
 }
@@ -205,10 +248,18 @@
   align-items: center;
   margin: var(--itemmargin);
   padding-bottom: 30px;
+  // max-width: 450px;
 
-  @media (min-width: 768px) {--itemcount: 2;}    
-  @media (min-width: 1200px) {--itemcount: 4;}
-  width: calc(100% / var(--itemcount) - 2 * var(--itemmargin));
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+    --itemcount: 2;
+  }    
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+    --itemcount: 4;
+  }
+
+  max-width: calc(100% / var(--itemcount) - 2 * var(--itemmargin));
 
   background-color: $contrast-text;
 
@@ -219,16 +270,8 @@
 }
 
 .team-member__photo {
-  width: 450px;
-  height: 460px;
-  @media (min-width: 768px) {
-    width: 354px;
-    height: 374px;
-  }
-  @media (min-width: 1200px) {
-    width: 270px;
-    height: 260px;
-  }
+  max-width: 100%;
+  height: auto;
 }
 
 .team-member__name {
@@ -265,8 +308,8 @@
 .our-client {
   --itemmargin: 15px;
   --itemcount: 2;
-  @media (min-width: 768px) {--itemcount: 3;}    
-  @media (min-width: 1200px) {--itemcount: 6;}
+  @media screen and (min-width: 768px) {--itemcount: 3;}    
+  @media screen and (min-width: 1200px) {--itemcount: 6;}
 
   display: inline-block;
   width: calc(100% / var(--itemcount) - 2 * var(--itemmargin));
@@ -305,28 +348,39 @@
 // #region Modal window styles
 
 .backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 95px 15px;
 
   background-color: $what-we-do-overlay;
 
   transition: opacity 250ms $animation-time-function;
   z-index: 3;
+
+  overflow-y: scroll;
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .modal-window {
   display: block;
   position: absolute;
-  width: 450px;
-  @media (min-width: 1200px) { width: 528px; }
-  top: 50%;
-  left: 50%;
-  margin: 0;
+  margin: auto;
   padding: 40px;
-  transform: scale(1) translate(-50%, -50%);
+  width: 100%;
+  max-width: 450px;
+  @media screen and (min-width: 1200px) { max-width: 528px; }
+
+  transform: scale(1);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -337,7 +391,7 @@
   transition: transform 250ms $animation-time-function;
   
   .backdrop.is-hidden > & {
-    transform: scale(1.1) translate(-45%, -45%);
+    transform: scale(1.1);
   }
 }
 
@@ -347,7 +401,7 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 1.5;
-  @media (min-width: 1200px) { line-height: 1.15; }
+  @media screen and (min-width: 1200px) { line-height: 1.15; }
   letter-spacing: 0.03em;
   text-align: center;
 
@@ -503,7 +557,7 @@
   font-size: 12px;
   line-height: 1.17;
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.71;
   }

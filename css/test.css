@@ -1,0 +1,10 @@
+.thumb {
+  margin-left: 200px;
+  margin-right: 30px;
+  outline: 2px solid tomato;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+}

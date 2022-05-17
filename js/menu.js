@@ -5,6 +5,7 @@
   menuBtnRef.addEventListener("click", toggleMenu);
 
   function toggleMenu() {
+    document.body.classList.toggle("menu-open");
     menuBtnRef.classList.toggle("is-open");
     mobileMenuRef.classList.toggle("is-open");
   }

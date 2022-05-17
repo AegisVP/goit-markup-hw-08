@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/test.css" />
+  </head>
+
+  <body>
+    <h1>title</h1>
+    <div class="thumb">
+      <img
+        class="image"
+        srcset="
+          ./images/ourteam/orepina/270.jpg 270w,
+          ./images/ourteam/orepina/354.jpg 354w,
+          ./images/ourteam/orepina/450.jpg 450w"
+        sizes="
+          (min-width: 1200px) 25vw,
+          (min-width: 768px)  50vw,
+          (min-width: 480px)  100vw"
+        src="./images/ourteam/orepina/450.jpg" 
+        alt=""
+      />
+
+      <!-- <picture class="image">
+      <source media="(min-width:1200px)" srcset="./images//ourteam/orepina/270.jpg">
+      <source media="(min-width: 768px)" srcset="./images/ourteam/orepina/354.jpg">
+      <img src="./images/ourteam/orepina/450.jpg" alt="Ольга Репина" />
+    </picture> -->
+
+    </div>
+  </body>
+
+</html>
