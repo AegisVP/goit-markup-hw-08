@@ -812,12 +812,6 @@ ul {
   background-image: linear-gradient(to right, rgba(47, 48, 51, 0.4), rgba(47, 48, 51, 0.4)), var(--bg-url);
 }
 
-@media screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 144px), screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-resolution: 1.5dppx) {
-  .hero__background {
-    --bg-url: url("../images/headerbg/480/img@15x.jpg");
-  }
-}
-
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
   .hero__background {
     --bg-url: url("../images/headerbg/480/img@2x.jpg");
@@ -834,12 +828,6 @@ ul {
   .hero__background {
     width: 768px;
     --bg-url: url("../images/headerbg/768/img.jpg");
-  }
-}
-
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 1.5), screen and (min-width: 768px) and (min-resolution: 144px), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-width: 768px) and (min-resolution: 1.5dppx) {
-  .hero__background {
-    --bg-url: url("../images/headerbg/768/img@15x.jpg");
   }
 }
 
@@ -861,12 +849,6 @@ ul {
     max-width: 1600px;
     height: 600px;
     --bg-url: url("../images/headerbg/1600/img.jpg");
-  }
-}
-
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 1.5), screen and (min-width: 1200px) and (min-resolution: 144px), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-width: 1200px) and (min-resolution: 1.5dppx) {
-  .hero__background {
-    --bg-url: url("../images/headerbg/1600/img@15x.jpg");
   }
 }
 

@@ -27,11 +27,7 @@
   background-color: transparent;
 
   --bg-url: url("../images/headerbg/480/img.jpg");
-  @media screen and (min-device-pixel-ratio: 1.5),
-         screen and (min-resolution: 144px),
-         screen and (min-resolution: 1.5dppx) {
-    --bg-url: url("../images/headerbg/480/img@15x.jpg");
-  }
+  
   @media screen and (min-device-pixel-ratio: 2),
          screen and (min-resolution: 192),
          screen and (min-resolution: 2dppx) {
@@ -47,11 +43,6 @@
     width: 768px;
     --bg-url: url("../images/headerbg/768/img.jpg");
 
-    @media screen and (min-device-pixel-ratio: 1.5),
-           screen and (min-resolution: 144px),
-           screen and (min-resolution: 1.5dppx) {
-      --bg-url: url("../images/headerbg/768/img@15x.jpg");
-    }
     @media screen and (min-device-pixel-ratio: 2),
            screen and (min-resolution: 192),
            screen and (min-resolution: 2dppx) {
@@ -70,11 +61,6 @@
     height: 600px;
     --bg-url: url("../images/headerbg/1600/img.jpg");
 
-    @media screen and (min-device-pixel-ratio: 1.5),
-           screen and (min-resolution: 144px),
-           screen and (min-resolution: 1.5dppx) {
-      --bg-url: url("../images/headerbg/1600/img@15x.jpg");
-    }
     @media screen and (min-device-pixel-ratio: 2),
            screen and (min-resolution: 192),
            screen and (min-resolution: 2dppx) {
