@@ -83,7 +83,7 @@ ul {
 }
 
 .section__header {
-  margin: 0 0 50px;
+  margin: 0 0 30px;
   color: #212121;
   font-weight: 700;
   font-size: 28px;
@@ -91,10 +91,11 @@ ul {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .section__header {
     font-size: 36px;
     line-height: 1.17;
+    margin-bottom: 50px;
   }
 }
 
@@ -210,6 +211,7 @@ ul {
 
 /* #endregion */
 .header {
+  position: relative;
   padding: 0;
   margin: 0;
 }
@@ -219,7 +221,6 @@ ul {
 }
 
 .header__container {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -896,7 +897,7 @@ ul {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 1200) {
+@media screen and (min-width: 1200px) {
   .hero__title {
     max-width: 696px;
     font-size: 44px;
@@ -965,6 +966,12 @@ ul {
   line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__header {
+    text-align: left;
+  }
 }
 
 .advantages__text {
@@ -1392,35 +1399,6 @@ body.modal-open {
   color: #2196f3;
 }
 
-.container--portfolio-padding {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
-
-@media (min-width: 1200px) {
-  .container--portfolio-padding {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
-
-.section--portfolio-padding {
-  padding-top: 0;
-  padding-bottom: 25px;
-}
-
-@media (min-width: 768px) {
-  .section--portfolio-padding {
-    padding-bottom: 30px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .section--portfolio-padding {
-    padding-bottom: 50px;
-  }
-}
-
 .filter {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1434,6 +1412,7 @@ body.modal-open {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    margin: 0 -4px -15px;
   }
 }
 
@@ -1484,6 +1463,19 @@ body.modal-open {
   margin: -15px;
   padding: 0;
   list-style: none;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    margin-top: 50px;
+  }
 }
 
 .portfolio__item {
@@ -1495,13 +1487,13 @@ body.modal-open {
   background-color: transparent;
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .portfolio__item {
     --itemcount: 2;
   }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .portfolio__item {
     --itemcount: 3;
   }

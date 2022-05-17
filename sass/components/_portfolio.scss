@@ -4,32 +4,36 @@
 
 // #region Portfolio section styles   
 
-.container--portfolio-padding {
-  padding-top: 60px;
-  padding-bottom: 60px;
+// .container--portfolio-padding {
+//   padding-top: 60px;
+//   padding-bottom: 60px;
 
-  @media (min-width: 1200px) {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
+//   @media (min-width: 1200px) {
+//     padding-top: 94px;
+//     padding-bottom: 94px;
+//   }
+// }
 
 // #endregion 
 
 // #region Portfolio button styles
 
-.section--portfolio-padding {
-  padding-top: 0;
-  padding-bottom: 25px;
-  @media (min-width: 768px) { padding-bottom: 30px; }
-  @media (min-width: 1200px) { padding-bottom: 50px; }
-}
+// .section--portfolio-padding {
+//   padding-top: 0;
+//   padding-bottom: 25px;
+//   @media (min-width: 768px) { padding-bottom: 30px; }
+//   @media (min-width: 1200px) { padding-bottom: 50px; }
+// }
 
 .filter {
   justify-content: center;
-  @media (max-width: 767.98px) { justify-content: flex-start; }
   list-style: none;
   margin: 0 -4px 0;
+
+  @media (max-width: 767.98px) {
+    justify-content: flex-start; 
+    margin: 0 -4px -15px;
+  }
 }
 
 .filter__item {
@@ -83,14 +87,18 @@
   padding: 0;
 
   list-style: none;
+
+  margin-top: 40px; //40px - 15px(margin portfolio-item)
+  @media screen and (min-width: 768px) { margin-top: 30px; } //30px - 15px(margin portfolio-item)
+  @media screen and (min-width: 1200px) { margin-top: 50px; } //50px - 15px(margin portfolio-item)
 }
 
 .portfolio__item {
   display: block;
   --itemmargin: 15px;
   --itemcount: 1;
-  @media (min-width: 768px) { --itemcount: 2; }
-  @media (min-width: 1200px) { --itemcount: 3; }
+  @media screen and (min-width: 768px) { --itemcount: 2; }
+  @media screen and (min-width: 1200px) { --itemcount: 3; }
   margin: var(--itemmargin);
   width: calc( 100% /  var(--itemcount) - 2 *  var(--itemmargin));
   background-color: transparent;

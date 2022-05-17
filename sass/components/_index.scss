@@ -103,7 +103,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  @media screen and (min-width: 1200) {
+  @media screen and (min-width: 1200px) {
     max-width: 696px;
 
     font-size: 44px;
@@ -163,6 +163,10 @@
   line-height: 1.14;
   text-transform: uppercase;
   text-align: center;
+
+  @media screen and (min-width:768px) {
+    text-align: left;
+  }
 }
 
 .advantages__text {
