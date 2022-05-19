@@ -88,9 +88,9 @@
 
   list-style: none;
 
-  margin-top: 40px; //40px - 15px(margin portfolio-item)
-  @media screen and (min-width: 768px) { margin-top: 30px; } //30px - 15px(margin portfolio-item)
-  @media screen and (min-width: 1200px) { margin-top: 50px; } //50px - 15px(margin portfolio-item)
+  margin-top: 40px - 15px; //40px - 15px(margin portfolio-item)
+  @media screen and (min-width: 768px) { margin-top: 30px - 15px; } //30px - 15px(margin portfolio-item)
+  @media screen and (min-width: 1200px) { margin-top: 50px - 15px; } //50px - 15px(margin portfolio-item)
 }
 
 .portfolio__item {
